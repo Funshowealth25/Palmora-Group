@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PALMORIA GROUP WORKING PROJECT2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d94c26a4-12ce-4e89-97a8-e5fb4dc5daec"
+  }
+}

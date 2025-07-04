@@ -1,0 +1,476 @@
+{
+  "config": "{\"version\":\"5.64\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "filters": "[{\"name\":\"19f72c2309bdb8904242\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "6f17f8050acc8e0e62c1",
+      "config": "{}",
+      "name": "3beaa564dee743696cec",
+      "parameters": "[{\"name\":\"fc05df40c0059bb0b161\",\"boundFilter\":\"7eccdf7a1452a004535a\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}}},{\"name\":\"f3f46ad200e60d2b5ab3\",\"boundFilter\":\"2cdbdd08e5d741e49192\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "490e75f7609cc9022d55",
+      "config": "{}",
+      "name": "761f996a42d53715018b",
+      "parameters": "[{\"name\":\"cb3cd54078d07ab0c951\",\"boundFilter\":\"da7e39b1b4d02b51399a\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Location\"}}},{\"name\":\"065477464870a3152794\",\"boundFilter\":\"779a44230eb06eb05064\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Location\"}}}]",
+      "type": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 5",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "1f428948d23b7a36aba1",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"146ade781c097bbe4116\",\"layouts\":[{\"id\":0,\"position\":{\"x\":555.6846473029046,\"y\":159.83402489626556,\"z\":3000,\"width\":210.62240663900417,\"height\":146.39004149377595,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Palmoria Group emp-data2.Location\"},{\"queryRef\":\"Sum(Palmoria Group emp-data2.Total )\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2.Location\",\"NativeReferenceName\":\"Location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2.Total )\",\"NativeReferenceName\":\"Sum of Total \"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 146.39,
+          "width": 210.62,
+          "x": 555.68,
+          "y": 159.83,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"37bebf7528417151ee9c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.45643153526971,\"y\":530.2904564315353,\"z\":5000,\"width\":298.7551867219917,\"height\":49.29460580912863,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Table 2: Bonus distribution of Individuals \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 49.29,
+          "width": 298.76,
+          "x": 10.46,
+          "y": 530.29,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"566e569e3535e69d49d4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":763.6452004860267,\"y\":160.1944106925881,\"z\":4000,\"width\":516.3547995139733,\"height\":387.26609963548,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2.Total )\"}],\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2.Location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2.Total )\",\"NativeReferenceName\":\"Sum of Total \"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2.Location\",\"NativeReferenceName\":\"Location\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'TOTAL SUM BY REGION'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.5}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 387.27,
+          "width": 516.35,
+          "x": 763.65,
+          "y": 160.19,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6ba9454ca5e5c75d8ed6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.88213851761847,\"y\":43.547995139732684,\"z\":0,\"width\":202.18712029161605,\"height\":116.64641555285542,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2 (2).Bonus)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Bonus\"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2 (2).Bonus)\",\"NativeReferenceName\":\"Sum of Bonus\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Bonus\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'TOTAL BONUS PAYOUT'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomRight'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"135L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 116.65,
+          "width": 202.19,
+          "x": 38.88,
+          "y": 43.55,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"834694c0749c0bb0506c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.838174273858925,\"y\":0,\"z\":10000,\"width\":385.39419087136935,\"height\":32.86307053941909,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Bonus and Total Payout Analysis \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 32.86,
+          "width": 385.39,
+          "x": 38.84,
+          "y": 0.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"94b87334cce205bbaad5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":309.2116182572614,\"y\":530.2904564315353,\"z\":6000,\"width\":268.87966804979254,\"height\":34.35684647302905,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Table 3: Total payout  to Individuals \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 34.36,
+          "width": 268.88,
+          "x": 309.21,
+          "y": 530.29,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"e4bb28171160420eb503\",\"layouts\":[{\"id\":0,\"position\":{\"x\":555.6846473029046,\"y\":279.33609958506224,\"z\":8000,\"width\":246.47302904564316,\"height\":53.77593360995851,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Table 3: Total payout by Region\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 53.78,
+          "width": 246.47,
+          "x": 555.68,
+          "y": 279.34,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"ebff8dd2886a2b493de9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270.61968408262453,\"y\":158.63912515188335,\"z\":2000,\"width\":269.06439854191984,\"height\":349.9392466585662,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Palmoria Group emp-data2.Name\"},{\"queryRef\":\"Sum(Palmoria Group emp-data2.Total )\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"},\"Name\":\"Palmoria Group emp-data2.Name\",\"NativeReferenceName\":\"Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2.Total )\",\"NativeReferenceName\":\"Sum of Total \"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 349.94,
+          "width": 269.06,
+          "x": 270.62,
+          "y": 158.64,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ecbec161130eb0dd81bd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":25.394190871369297,\"y\":159.83402489626556,\"z\":1000,\"width\":261.41078838174275,\"height\":351.0373443983403,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Name\"},{\"queryRef\":\"Sum(Palmoria Group emp-data2 (2).Bonus)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"},\"Name\":\"Palmoria Group emp-data2 (2).Name\",\"NativeReferenceName\":\"Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Bonus\"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2 (2).Bonus)\",\"NativeReferenceName\":\"Sum of Bonus\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 351.04,
+          "width": 261.41,
+          "x": 25.39,
+          "y": 159.83,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f39acf469180a05cb180\",\"layouts\":[{\"id\":0,\"position\":{\"x\":555.6846473029046,\"y\":548.2157676348548,\"z\":9000,\"width\":690.1244813278008,\"height\":171.78423236514524,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Analysis Note:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"12pt\",\"color\":\"#6b2328\"}}]},{\"textRuns\":[{\"value\":\"From Table 2, total sum of bonus to be paid out to the entire staff of Palmora will amount to $2.2m . while the total payout of both salary and bonus as shown on Table 3 sum up to 71.93m.\",\"textStyle\":{\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Regionally, Kaduna region will have highest payout of both salary and bonus amounting to $27.483m with Abuja and Lagos recording $24.917m and $19.526m respectively. \",\"textStyle\":{\"fontSize\":\"12pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 171.78,
+          "width": 690.12,
+          "x": 555.68,
+          "y": 548.22,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f84acb68d445b78e5075\",\"layouts\":[{\"id\":0,\"position\":{\"x\":286.1725394896719,\"y\":43.547995139732684,\"z\":7000,\"width\":239.51397326852978,\"height\":116.64641555285542,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2.Total )\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2.Total )\",\"NativeReferenceName\":\"Sum of Total \"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total \"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'SALARY AND BONUS  PAYOUT'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 116.65,
+          "width": 239.51,
+          "x": 286.17,
+          "y": 43.55,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"da7e39b1b4d02b51399a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Location\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"779a44230eb06eb05064\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Location\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "490e75f7609cc9022d55",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"36952f51cce4d67c1043\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.925311203319502,\"y\":50.78838174273859,\"z\":0,\"width\":478.00829875518673,\"height\":140.4149377593361,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Gender\",\"active\":true},{\"queryRef\":\"Palmoria Group emp-data2 (2).Department\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2 (2).Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"},\"Name\":\"Palmoria Group emp-data2 (2).Gender\",\"NativeReferenceName\":\"Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"},\"Name\":\"Palmoria Group emp-data2 (2).Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2 (2).Salary)\",\"NativeReferenceName\":\"Salary\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Gender\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}}],\"isPinned\":true},{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Department\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Non-Diclosure'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'Female'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'Male'\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 140.41,
+          "width": 478.01,
+          "x": 17.93,
+          "y": 50.79,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"597de9a80db2481793a1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":224.0663900414938,\"z\":4000,\"width\":265.89211618257264,\"height\":383.90041493775936,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Department\",\"active\":true},{\"queryRef\":\"Palmoria Group emp-data2 (2).Gender\"},{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"},\"Name\":\"Palmoria Group emp-data2 (2).Department\",\"NativeReferenceName\":\"Department\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"},\"Name\":\"Palmoria Group emp-data2 (2).Gender\",\"NativeReferenceName\":\"Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Location\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Department\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Department\"}}],\"isPinned\":true},{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Gender\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Location\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Training'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PALMORA DEPARTMENT'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Department\"}},\"Right\":{\"Literal\":{\"Value\":\"'Training'\"}}}}},\"displayName\":\"Training\"}]}}",
+          "filters": "[]",
+          "height": 383.90,
+          "width": 265.89,
+          "x": 0.00,
+          "y": 224.07,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6d24b01cc717c8cec930\",\"layouts\":[{\"id\":0,\"position\":{\"x\":286.80497925311204,\"y\":280.8298755186722,\"z\":3000,\"width\":452.61410788381744,\"height\":270.3734439834025,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Gender\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2 (2).Salary)\"},{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Department)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"},\"Name\":\"Palmoria Group emp-data2 (2).Gender\",\"NativeReferenceName\":\"Count of Gender\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Department)\",\"NativeReferenceName\":\"Count of Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2 (2).Salary)\",\"NativeReferenceName\":\"Sum of Salary\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 270.37,
+          "width": 452.61,
+          "x": 286.80,
+          "y": 280.83,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"70c2a0f2bd2a1a876bd6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":739.4190871369295,\"y\":255.43568464730293,\"z\":6000,\"width\":540.746887966805,\"height\":340.5809128630706,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Analysis Note:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"12pt\",\"color\":\"#6b2328\"}},{\"value\":\" \",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"12pt\",\"color\":\"#6b2328\"}}]},{\"textRuns\":[{\"value\":\"Out of 12 departments, the male gender are paid higher in 7 of the departments which make up 58% of the entire department(Accounting, Legal, production, Human Resources, Sales,  training and support) while the remaining 5 departments favored the female gender.\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Analysis further shows that Kaduna region affected the female gender more in terms of pay gap hence the management need to focus on this region to further improve the pay of the female gender to ensure gender equality and balance.\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Also the some department in Abuja region equally created a pay gap for the male counterpart hence the management should also focus on this region to ensure fairness of both gender.\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"12pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 340.58,
+          "width": 540.75,
+          "x": 739.42,
+          "y": 255.44,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"846642e82c73138094a5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.925311203319502,\"y\":162.8215767634855,\"z\":8000,\"width\":327.1369294605809,\"height\":38.838174273858925,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Table 1: Salary Table  of Gender by Region\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 38.84,
+          "width": 327.14,
+          "x": 17.93,
+          "y": 162.82,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"b6a2c0b065ea957a9d59\",\"layouts\":[{\"id\":0,\"position\":{\"x\":528.7966804979253,\"y\":32.86307053941909,\"z\":2000,\"width\":475.0207468879668,\"height\":210.62240663900417,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Palmoria Group emp-data2 (2).Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0},\"Name\":\"Sum(Palmoria Group emp-data2 (2).Salary)\",\"NativeReferenceName\":\"Sum of Salary\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 210.62,
+          "width": 475.02,
+          "x": 528.80,
+          "y": 32.86,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"cea8d04f012d80a403e4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":286.80497925311204,\"y\":551.2033195020747,\"z\":9000,\"width\":410.78838174273864,\"height\":70.20746887966806,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Salary by Department distribution among the Gender \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 70.21,
+          "width": 410.79,
+          "x": 286.80,
+          "y": 551.20,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"d540db025e2e1c734835\",\"layouts\":[{\"id\":0,\"position\":{\"x\":549.7095435684648,\"y\":234.5228215767635,\"z\":7000,\"width\":189.70954356846474,\"height\":40.331950207468886,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Salary by Region graph\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 40.33,
+          "width": 189.71,
+          "x": 549.71,
+          "y": 234.52,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"e06a5b3a3ac5e651d170\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":5000,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"e353e3fe8516b8d4ac54\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.925311203319502,\"y\":13.443983402489627,\"z\":1000,\"width\":478.00829875518673,\"height\":37.344398340248965,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Gender Pay Gap Analysis; Location and Department \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#0d6abf\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 37.34,
+          "width": 478.01,
+          "x": 17.93,
+          "y": 13.44,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "6ef459cddc4164239a68",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"09132e3be0be56053208\",\"layouts\":[{\"id\":0,\"position\":{\"x\":115.02074688796681,\"y\":103.07053941908714,\"z\":1000,\"width\":476.5145228215768,\"height\":237.5103734439834,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"},{\"queryRef\":\"select\",\"hidden\":true}],\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\",\"NativeReferenceName\":\"Count of Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Location\"},{\"NativeVisualCalculation\":{\"Language\":\"dax\",\"Expression\":\"BLANK()\",\"Name\":\"Calculation\"},\"Name\":\"select\",\"NativeReferenceName\":\"Calculation\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 237.51,
+          "width": 476.51,
+          "x": 115.02,
+          "y": 103.07,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"421ad9c0c0d22637a44e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":651.286307053942,\"y\":198.6721991701245,\"z\":3000,\"width\":476.5145228215768,\"height\":85.14522821576764,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"From the regional graph, Kaduna region is the highest with 361 staff . Abuja region  is the second highest populated region with 335  staff while Lagos has 250 population of employees.\",\"textStyle\":{\"fontSize\":\"12pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 85.15,
+          "width": 476.51,
+          "x": 651.29,
+          "y": 198.67,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"726ad0da46b34e4354a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":164.31535269709545,\"y\":669.2116182572614,\"z\":5000,\"width\":476.5145228215768,\"height\":38.838174273858925,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Graphical illustration of gender distribution by Department\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 38.84,
+          "width": 476.51,
+          "x": 164.32,
+          "y": 669.21,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"aa360e6291c719611d9a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":164.31535269709545,\"y\":339.0871369294606,\"z\":4000,\"width\":410.78838174273864,\"height\":41.82572614107884,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Graphical illustration of gender distribution by location \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 41.83,
+          "width": 410.79,
+          "x": 164.32,
+          "y": 339.09,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"cfeed97f0b7e1e04db86\",\"layouts\":[{\"id\":0,\"position\":{\"x\":651.286307053942,\"y\":473.5269709543569,\"z\":6000,\"width\":439.17012448132783,\"height\":150.8713692946058,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\" Male gender has the highest count recording 465. While Female gender is the second highest with 441 count . Non-Disclosure make up the remaining count of 40.\",\"textStyle\":{\"fontSize\":\"12pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 150.87,
+          "width": 439.17,
+          "x": 651.29,
+          "y": 473.53,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"ddb8aa89866a10e0bea7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2.987551867219917,\"y\":20.91286307053942,\"z\":0,\"width\":700.5809128630706,\"height\":50.78838174273859,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Palmora Group Analysis: Gender Distribution Analysis\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 50.79,
+          "width": 700.58,
+          "x": 2.99,
+          "y": 20.91,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f3a15d00e54ca7417e99\",\"layouts\":[{\"id\":0,\"position\":{\"x\":98.58921161825727,\"y\":430.20746887966806,\"z\":2000,\"width\":476.5145228215768,\"height\":239.00414937759336,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Department)\"}],\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Gender\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Department)\",\"NativeReferenceName\":\"Count of Department\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"},\"Name\":\"Palmoria Group emp-data2 (2).Gender\",\"NativeReferenceName\":\"Gender\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Department\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 239.00,
+          "width": 476.51,
+          "x": 98.59,
+          "y": 430.21,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"7eccdf7a1452a004535a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}},\"type\":\"Categorical\",\"howCreated\":5},{\"name\":\"2cdbdd08e5d741e49192\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Gender\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "6f17f8050acc8e0e62c1",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2964c4a31660acc29408\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.35684647302905,\"y\":88.13278008298755,\"z\":0,\"width\":483.9834024896266,\"height\":289.79253112033194,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}],\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Rating\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\",\"NativeReferenceName\":\"Count of Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Rating\"},\"Name\":\"Palmoria Group emp-data2 (2).Rating\",\"NativeReferenceName\":\"Rating\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 289.79,
+          "width": 483.98,
+          "x": 34.36,
+          "y": 88.13,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"693ff223958b17ab58a7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.35684647302905,\"y\":19.419087136929463,\"z\":6000,\"width\":376.43153526970957,\"height\":47.80082987551867,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Rating Based on Gender Analysis\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#50005c\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 47.80,
+          "width": 376.43,
+          "x": 34.36,
+          "y": 19.42,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"87cf94173d6909d97406\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"9b1d45729a42e6570e33\",\"layouts\":[{\"id\":0,\"position\":{\"x\":664.7302904564316,\"y\":88.13278008298755,\"z\":4000,\"width\":504.896265560166,\"height\":289.79253112033194,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Rating\",\"active\":true}],\"Y2\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}],\"Y\":[{\"queryRef\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Rating\"},\"Name\":\"Palmoria Group emp-data2 (2).Rating\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"},{\"FilteredEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}},\"Filters\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Female'\"}}]]}}}]},\"Name\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'step'\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}}}}],\"valueAxis\":[{\"properties\":{\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secShowAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"201.05806451612904D\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"secEnd\":{\"expr\":{\"Literal\":{\"Value\":\"431.294623655914D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#B3B3B3'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}}]}}}",
+          "filters": "[]",
+          "height": 289.79,
+          "width": 504.90,
+          "x": 664.73,
+          "y": 88.13,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"aff29e7e040e79aa01a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":55.26970954356847,\"y\":446.6390041493776,\"z\":3000,\"width\":463.0705394190872,\"height\":253.94190871369295,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Rating\",\"active\":true}],\"Y2\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}],\"Y\":[{\"queryRef\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Rating\"},\"Name\":\"Palmoria Group emp-data2 (2).Rating\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"},{\"FilteredEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}},\"Filters\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Male'\"}}]]}}}]},\"Name\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'step'\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}}}}],\"valueAxis\":[{\"properties\":{\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secShowAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"212D\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"secEnd\":{\"expr\":{\"Literal\":{\"Value\":\"431.294623655914D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#B3B3B3'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}}]}}}",
+          "filters": "[]",
+          "height": 253.94,
+          "width": 463.07,
+          "x": 55.27,
+          "y": 446.64,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"e23b31ff7da613b593e4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":377.92531120331955,\"z\":1000,\"width\":593.0290456431536,\"height\":58.25726141078839,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"420 staff make up average rating ,180 staff make up the good rating , poor rating consist of 131 staff, very good consist of 90 ,  Not rated make up 71 while very poor rating is made up of  54 staff\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 58.26,
+          "width": 593.03,
+          "x": 0.00,
+          "y": 377.93,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f153ebfed0be2e964608\",\"layouts\":[{\"id\":0,\"position\":{\"x\":664.7302904564316,\"y\":388.38174273858925,\"z\":5000,\"width\":540.746887966805,\"height\":331.6182572614108,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Rating\",\"active\":true}],\"Y2\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}],\"Y\":[{\"queryRef\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Rating\"},\"Name\":\"Palmoria Group emp-data2 (2).Rating\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"},{\"FilteredEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}},\"Filters\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Non-Diclosure'\"}}]]}}}]},\"Name\":\"FilteredEval(CountNonNull(Palmoria Group emp-data2 (2).Gender), [{Condition(expr)}])\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Gender\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'step'\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}}}}],\"valueAxis\":[{\"properties\":{\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secShowAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"18.236559139784948D\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"secEnd\":{\"expr\":{\"Literal\":{\"Value\":\"431.294623655914D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#B3B3B3'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(Palmoria Group emp-data2 (2).Gender)\"}}]}}}",
+          "filters": "[]",
+          "height": 331.62,
+          "width": 540.75,
+          "x": 664.73,
+          "y": 388.38,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e8beea303abc7a50e0a1",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f81663528d33892cee3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.838174273858925,\"y\":451.1203319502075,\"z\":6000,\"width\":766.3070539419087,\"height\":123.98340248962657,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Analysis Note:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"12pt\",\"color\":\"#6b2328\"}}]},{\"textRuns\":[{\"value\":\"Based on the analysis of payment distribution above , Palmoria was only able to meet 30.8% of the $90,000 minimum pay throughout the entire region (\",\"textStyle\":{\"fontSize\":\"12pt\"}},{\"value\":\"292 \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"12pt\"}},{\"value\":\"staff where paid between the band of 90,000 and above throughout the three regions). 69.2% of the staff are paid below the benchmark  of the manufacturing sector\",\"textStyle\":{\"fontSize\":\"12pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 123.98,
+          "width": 766.31,
+          "x": 38.84,
+          "y": 451.12,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"2038dc05298dad1a43d2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":26.887966804979254,\"y\":85.14522821576764,\"z\":0,\"width\":253.94190871369295,\"height\":422.73858921161826,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Salary (bins)\",\"active\":true},{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary (bins)\"},\"Name\":\"Palmoria Group emp-data2 (2).Salary (bins)\",\"NativeReferenceName\":\"Count of Salary (bins)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Count of Location\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Salary (bins)\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Palmoria Group emp-data2 (2)\"}},\"Property\":\"Salary (bins)\"}}],\"isPinned\":true},{\"queryRefs\":[\"Palmoria Group emp-data2 (2).Location\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 422.74,
+          "width": 253.94,
+          "x": 26.89,
+          "y": 85.15,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"609c1d47560a94a0ee94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":303.2365145228216,\"y\":374.9377593360996,\"z\":5000,\"width\":203.15352697095437,\"height\":34.35684647302905,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Pay Distribution by Region \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 34.36,
+          "width": 203.15,
+          "x": 303.24,
+          "y": 374.94,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"8afe9941408ee7900657\",\"layouts\":[{\"id\":0,\"position\":{\"x\":760.3319502074689,\"y\":427.21991701244815,\"z\":4000,\"width\":357.0124481327801,\"height\":47.80082987551867,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Pay Distribution of Employee group  by a band \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontStyle\":\"italic\",\"fontSize\":\"11pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 47.80,
+          "width": 357.01,
+          "x": 760.33,
+          "y": 427.22,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"c0c8c77ab9094720680d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":38.838174273858925,\"y\":34.35684647302905,\"z\":1000,\"width\":395.85062240663905,\"height\":50.78838174273859,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Employee Salary  Grouped by Band:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#6b2328\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 50.79,
+          "width": 395.85,
+          "x": 38.84,
+          "y": 34.36,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c0ea1d46e68edad0a68b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":230.04149377593362,\"y\":100.08298755186723,\"z\":2000,\"width\":368.9626556016598,\"height\":274.8547717842324,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Location\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Salary (bins))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Location\"},\"Name\":\"Palmoria Group emp-data2 (2).Location\",\"NativeReferenceName\":\"Count of Location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary (bins)\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Salary (bins))\",\"NativeReferenceName\":\"Count of Salary (bins)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary (bins)\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 274.85,
+          "width": 368.96,
+          "x": 230.04,
+          "y": 100.08,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e319d2b60769578aad37\",\"layouts\":[{\"id\":0,\"position\":{\"x\":690.1244813278008,\"y\":85.14522821576764,\"z\":3000,\"width\":539.2531120331951,\"height\":342.0746887966805,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Palmoria Group emp-data2 (2).Salary (bins)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Palmoria Group emp-data2 (2).Name)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Palmoria Group emp-data2 (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Salary (bins)\"},\"Name\":\"Palmoria Group emp-data2 (2).Salary (bins)\",\"NativeReferenceName\":\"Count of Salary (bins)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"}},\"Function\":5},\"Name\":\"CountNonNull(Palmoria Group emp-data2 (2).Name)\",\"NativeReferenceName\":\"Count of Name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 342.07,
+          "width": 539.25,
+          "x": 690.12,
+          "y": 85.15,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
